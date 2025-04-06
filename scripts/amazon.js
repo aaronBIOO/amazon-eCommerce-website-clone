@@ -1,5 +1,6 @@
 let productsHTML = '';
 
+// Generating the HTML structure for the page with JavaScript
 products.forEach((product) => {
     productsHTML += `
         <div class="product-container">
