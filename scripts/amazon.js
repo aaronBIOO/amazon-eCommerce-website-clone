@@ -5,7 +5,7 @@ const products = [{
         stars: 4.5,
         count: 87
     },
-    priceCents: 1090
+    priceCent: 1090
 }, {
     image: 'images/products/intermediate-composite-basketball.jpg',
     name: 'Intermediate Size Basketball',
@@ -47,7 +47,7 @@ products.forEach((product) => {
             </div>
 
             <div class="product-price">
-                ${product.priceCent / 100}
+                ${(product.priceCent / 100).toFixed(2)}
             </div>
 
             <div class="product-quantity-container">
