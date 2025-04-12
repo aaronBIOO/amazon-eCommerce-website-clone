@@ -1,9 +1,11 @@
 import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
+
+
+// Generating the HTML structure for the main page of the eCommerce
 let productsHTML = '';
 
-// Generating the HTML structure for the page with JavaScript
 products.forEach((product) => {
     productsHTML += `
         <div class="product-container">
@@ -55,7 +57,7 @@ products.forEach((product) => {
             </button>
         </div>
     `;
-})
+});
 
 
 // For adding the HTML structure for all product together from the loop

@@ -1,3 +1,4 @@
+// Products added to cart
 export const cart = [{
     productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
     quantity: 2
@@ -6,6 +7,8 @@ export const cart = [{
     quantity: 1
 }];
 
+
+// function for adding a product to a cart with its product ID
 export function addToCart(productId) {
     let matchingItem;
 
