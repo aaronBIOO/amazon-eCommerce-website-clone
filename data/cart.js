@@ -1,11 +1,11 @@
-// Products added to cart
+// Products added to cart ( located in localStorage )
 export let cart = JSON.parse(localStorage.getItem('cart'));    
- 
+
 
 if (!cart) {
     cart = [{
         productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
-        quantity: 2,
+        quantity: 1,
         deliveryOptionId: '1'
     }, {
         productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
@@ -15,6 +15,7 @@ if (!cart) {
 }
 
 
+// Saving the cart data into localStorage
 function saveToStorage() {
     localStorage.setItem('cart', JSON.stringify(cart)); 
 }
@@ -40,10 +41,11 @@ export function addToCart(productId) {
         });
     }
 
-    saveToStorage();
+    saveToStorage(); // saving to localStorage
 }
 
- 
+
+ // Function to remove product from cart using its productId
 export function removeFromCart(productId) {
     const newCart = [];
 
@@ -53,7 +55,7 @@ export function removeFromCart(productId) {
         }
     });
 
-    cart = newCart;
+    cart = newCart; // New cart after removing the product we want to remove
 
     saveToStorage();
 }
