@@ -65,6 +65,7 @@ document.querySelector('.js-products-grid')
     .innerHTML = productsHTML;
 
 
+// Function for updating the cart quantity
 function updateCartQuantity() {
     let cartQuantity = 0;
 
@@ -72,10 +73,13 @@ function updateCartQuantity() {
         cartQuantity += cartItem.quantity;
     });
 
+    //selecting the area on the HTML page responsible for showing cart quantity and its update
     document.querySelector('.js-cart-quantity')
         .innerHTML = cartQuantity;
 }
 
+
+// Adding a product to a Cart using the add button
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {

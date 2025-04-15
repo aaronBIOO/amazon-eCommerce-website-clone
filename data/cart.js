@@ -45,7 +45,7 @@ export function addToCart(productId) {
 }
 
 
- // Function to remove product from cart using its productId
+ // Function for removing a product from cart using its productId
 export function removeFromCart(productId) {
     const newCart = [];
 
