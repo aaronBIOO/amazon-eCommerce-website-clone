@@ -5,11 +5,13 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions } from '../data/deliveryOptions.js';
 
 
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
-console.log(deliveryDate.format('dddd, MMMM D'));
+// Using an external library ( dayjs ) to build real-time dates
+const today = dayjs(); // current day
+const deliveryDate = today.add(7, 'days'); // adding 7 days to the current day
+console.log(deliveryDate.format('dddd, MMMM D')); // formating how the days look like
 
 
+// Building the checkout structure 
 let cartSummaryHTML = '';
 
 cart.forEach((cartItem) => {
