@@ -1,6 +1,6 @@
 // Products added to cart ( located in localStorage )
 export let cart = JSON.parse(localStorage.getItem('cart'));    
-
+console.log(cart);
 
 if (!cart) {
     cart = [{

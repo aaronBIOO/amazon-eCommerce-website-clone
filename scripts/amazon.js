@@ -3,6 +3,10 @@ import { products } from '../data/products.js';
 import formatCurrency from './utils/money.js';
 
 
+// Updating the cart quantity upon loading
+updateCartQuantity();
+
+
 // Generating the HTML structure for the main page of the eCommerce
 let productsHTML = '';
 
